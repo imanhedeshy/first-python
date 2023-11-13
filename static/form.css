@@ -1,0 +1,79 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Title */
+.title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__field {
+  margin-bottom: 15px;
+}
+.form__field > .form__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form__field > .form__input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.form__button:hover {
+  background-color: #0056b3;
+}
+
+/* User list table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+.table__header, .table__cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.table__header {
+  background-color: #007bff;
+  color: #fff;
+}
+.table__row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=form.css.map */

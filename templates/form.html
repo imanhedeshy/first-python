@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='form.css') }}"
+    />
+    <script src="{{ url_for('static', filename='form.js') }}" defer></script>
+</head>
+  <body>
+    <div class="container">
+      <h1 class="title">User Registration</h1>
+      <form id="userForm" class="form" method="POST" action="/add_user">
+        <div class="form__field">
+          <label class="form__label" for="name">Name:</label>
+          <input
+            class="form__input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="email">Email:</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <button class="form__button" type="submit">Submit</button>
+      </form>
+
+      <h2 class="title">All Users</h2>
+      <table class="table">
+        <thead class="table__header">
+          <tr>
+            <th class="table__cell">ID</th>
+            <th class="table__cell">Name</th>
+            <th class="table__cell">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr class="table__row">
+            <td class="table__cell">{{ user.id }}</td>
+            <td class="table__cell">{{ user.name }}</td>
+            <td class="table__cell">{{ user.email }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
