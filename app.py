@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:Saharkhanoom2#@localhost:3306/first_python"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:root#@localhost:3306/first_python"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
